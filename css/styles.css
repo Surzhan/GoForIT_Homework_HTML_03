@@ -6,6 +6,8 @@ body {
 }
 
 p {
+	margin: 0;
+	padding: 0;
 	line-height: 16pt;
 	letter-spacing: -0.1pt;
 }
@@ -27,7 +29,7 @@ header {
 }
 
 main {
-		margin: 0 47px;
+	margin: 0 47px;
 }
 
 footer {
@@ -49,9 +51,12 @@ ul {
 }
 
 .header-logo {
+	position: relative;
 	float: left;
 	height: 130px;
 }
+
+/* MAIN HEADER MENU NAVIGATION */
 
 .main-header-navigation {
 	height: 40px;
@@ -65,10 +70,22 @@ ul {
 .main-header-navigation a {
 	display: block;
 	width: 100px;
-	margin: 0 24px;
+	padding: 10px 0;
+	margin-right: 40px;
+	border-left: 1px solid #525151;
+	border-right: 1px solid #525151;
 	color: white;
 	font-size: 11pt;
+	text-align: center;
 }
+
+.main-header-navigation a:hover {
+	background-color: #424242;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+}
+
+/* SIDEBAR MENU */
 
 .left-sidebar-box {
 	float: left;
@@ -76,14 +93,30 @@ ul {
 	margin-top: 40px;
 }
 
+.sidebar-menu {
+	width: 240px;
+}
+
 .sidebar-menu a {
 	display: block;
-	height: 40px;
-	width: 240px;
-	padding: 0px 0px 0px 24px;
-	border: 1px solid #ededed;
+	height: 28px;
+	padding: 11px 0px 0px 24px;
+	border-top: 1px solid rgb(200, 200, 200);
+	border-left: 1px solid rgb(200, 200, 200);
+	border-right: 1px solid rgb(200, 200, 200);
 	color: #2c2c2c;
 }
+
+.sidebar-menu:last-child {
+	border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.sidebar-menu a:hover {
+	padding: 10px 0px 0px 36px;
+	background-color: #f9f9f9;
+}
+
+/* CONTENT BLOCK */
 
 .content-box {
 	float: right;
@@ -95,10 +128,11 @@ ul {
 	position: relative;
 	height: 400px;
 	margin:  0 auto;
-	border: 1px solid #ededed;
+	border: 1px solid rgb(200, 200, 200);
 }
 
-.content-box-img img {
+.content-box-img img,
+.header-logo img {
 	position: absolute;
 	margin: auto;
 	left: 0;
@@ -107,16 +141,52 @@ ul {
 	bottom: 0;
 }
 
+.header-logo img {
+	top: 10px;
+}
+
 .content-box-text {
-	padding: 20px 24px 45px;
+	padding: 32px 24px 58px;
 	hyphens: manual;
 }
 
+/* FOOTER */
+
 .footer-navigation {
+	float: left;
+	width: 70%;
+	margin-bottom: 40px;
 	background-color: #e1e1e1;
 }
 
+.footer-navigation li {
+	float: left;
+	height: 40px;
+}
+
 .footer-navigation a {
+	display: block;
+	width: 100px;
+	margin-right: 40px;
+	padding-top: 10px;
 	color: #2c2c2c;
 	font-size: 10pt;
+	text-align: center;
+}
+
+.footer-navigation a:hover {
+	text-decoration: underline;
+}
+
+.copyright {
+	float: right;
+	width: 30%;
+
+}
+
+.copyright p {
+	height: 30px;
+	padding: 10px 25px 0 0;
+	background-color: #e1e1e1;
+	text-align: right;
 }
